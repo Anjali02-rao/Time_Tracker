@@ -1,4 +1,3 @@
-
 const activities = [
   {
     title: "Work",
@@ -38,43 +37,50 @@ const activities = [
   },
 ];
 
-const daily = document.getElementById('daily')
-const weekly = document.getElementById('weekly')
-const monthly = document.getElementById('monthly')
+const daily = document.getElementById("daily");
+const weekly = document.getElementById("weekly");
+const monthly = document.getElementById("monthly");
 
 // document.addEventListener("DOMContentLoaded", () => {
-//   updateTime("daily") 
-// });   
+//   updateTime("daily")
+// });
 // document.addEventListener("DOMContentLoaded", () => {
-//   updateTime("weekly") 
-// });   
+//   updateTime("weekly")
+// });
 // document.addEventListener("DOMContentLoaded", () => {
-//   updateTime("monthly") 
-// });   
-      
-     
-      document.querySelector(".user-tracker").addEventListener("click", (e) => {
-      if (e.target.tagName === "P") {
-      const period = e.target.textContent.toLowerCase();
-      updateTime(period);
+//   updateTime("monthly")
+// });
 
-      document.querySelectorAll(".user-tracker p").forEach(p => p.classList.remove("active"));
-      e.target.classList.add("active");
+document.querySelector(".user-tracker").addEventListener("click", (e) => {
+  if (e.target.tagName === "P") {
+    const period = e.target.textContent.toLowerCase();
+    updateTime(period);
+
+    document
+      .querySelectorAll(".user-tracker p")
+      .forEach((p) => p.classList.remove("active"));
+    e.target.classList.add("active");
   }
-}); 
+});
 
 updateTime("weekly");
-  
 
-  function updateTime(period) {
-  activities.forEach(e => {
-    
-      document.querySelector (`.${e.title.toLowerCase().replace(/\s+/g, "-")} .display h3`).textContent = e[period].current+"hrs";
+function updateTime(period) {
+  activities.forEach((e) => {
+    document.querySelector(
+      `.${e.title.toLowerCase().replace(/\s+/g, "-")} .display h3`
+    ).textContent = e[period].current + "hrs";
     if (period === "daily")
-      document.querySelector(`.${e.title.toLowerCase().replace(/\s+/g, "-")} .display p`).textContent = "Yesterday - " + e[period].previous + "hrs";
+      document.querySelector(
+        `.${e.title.toLowerCase().replace(/\s+/g, "-")} .display p`
+      ).textContent = "Yesterday - " + e[period].previous + "hrs";
     else if (period === "weekly")
-      document.querySelector(`.${e.title.toLowerCase().replace(/\s+/g, "-")} .display p`).textContent = "Last Week - " + e[period].previous + "hrs";
+      document.querySelector(
+        `.${e.title.toLowerCase().replace(/\s+/g, "-")} .display p`
+      ).textContent = "Last Week - " + e[period].previous + "hrs";
     else if (period === "monthly")
-      document.querySelector(`.${e.title.toLowerCase().replace(/\s+/g, "-")} .display p`).textContent = "Last Month - " + e[period].previous + "hrs";
-  })
+      document.querySelector(
+        `.${e.title.toLowerCase().replace(/\s+/g, "-")} .display p`
+      ).textContent = "Last Month - " + e[period].previous + "hrs";
+  });
 }

@@ -1,23 +1,21 @@
 :root {
-    - Blue: hsl(246, 80%, 60%)
+     --Blue: hsl(246, 80%, 60%)
 
-    - Light red (work): hsl(15, 100%, 70%)
-    - Soft blue (play): hsl(195, 74%, 62%)
-    - Light red (study): hsl(348, 100%, 68%)
-    - Lime green (exercise): hsl(145, 58%, 55%)
-    - Violet (social): hsl(264, 64%, 52%)
-    - Soft orange (self care): hsl(43, 84%, 65%)
+     --Light red : hsl(15, 100%, 70%)
+     --Soft blue : hsl(195, 74%, 62%)
+     --Light red : hsl(348, 100%, 68%)
+     --Lime-green : hsl(145, 58%, 55%)
+     --Violet : hsl(264, 64%, 52%)
+     --Soft orange : hsl(43, 84%, 65%)
 
-    - Very dark blue: hsl(226, 43%, 10%)
-    - Dark blue: hsl(235, 46%, 20%)
-    - Desaturated blue: hsl(235, 45%, 61%)
-    - Pale Blue: hsl(236, 100%, 87%)
+    --Very dark blue: hsl(226, 43%, 10%)
+    --Dark blue: hsl(235, 46%, 20%)
+    --Desaturated blue: hsl(235, 45%, 61%)
+    --Pale Blue: hsl(236, 100%, 87%)
 
     --font-color-white: white
-    - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+    --Family: [Rubik](https://fonts.google.com/specimen/Rubik)
     - Weights: 300, 400, 500
-
-
 }
 
 *{
@@ -44,6 +42,7 @@ html, body {
 #user-profile img {
     width: 40px;
     height: auto;
+    border-radius: 50%;
 }
 
 #grid-container {
@@ -87,7 +86,7 @@ html, body {
 
 .user-tracker p {
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
     color: hsl(236, 100%, 87%);
     opacity: 0.75;
     transition: opacity 0.3s;
@@ -116,13 +115,6 @@ h4 {
     font-weight: 400;
 }
 
-.hours-spent  {
-    background-color: hsl(235, 46%, 20%);
-    height: 200px;
-    border-radius: 20px;
-    padding: 1em;   
-}
-
 .grid-item {
     justify-content: space-between;
     border-radius: 20px;
@@ -130,29 +122,32 @@ h4 {
     color: var(--font-color-white);
 }
 
-h2 {
-    
-    font-size: 18px;
-    font-weight: 300;
-    font-style: normal;
-
+.images {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.display h3 {
-    color: white;
-    font-size: 32px;
-    font-weight: 400;
+.hours-spent  {
+    background-color: hsl(235, 46%, 20%);
+    height: 200px;
+    border-radius: 20px;
+    padding: 1em;       
 }
 
 .images img {
   width: 50px;
-  height: 50px;
-   
+  height: 50px;   
 } 
 
-.images {
-    display: flex;
-    justify-content: flex-end;
+h2 {    
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.display h3 {
+    color: var(--font-color-white);
+    font-size: 26px;
+    font-weight: 400;
 }
 
 .dots-icon {
@@ -216,6 +211,7 @@ h2 {
 }
 
 p {
+    font-size: 10px;
     text-align: start;
     margin-top: 20px;
     color:hsl(236, 100%, 87%)

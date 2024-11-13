@@ -126,6 +126,9 @@ h4 {
 .images {
     display: flex;
     justify-content: flex-end;
+    margin-right: 20px;
+    height: 36px;
+    overflow: hidden;
 }
 
 .hours-spent  {

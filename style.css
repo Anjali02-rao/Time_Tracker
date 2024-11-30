@@ -231,9 +231,14 @@ p {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
         gap: 1.5rem
-        
-    }    
+    }
+
+    .grid-item, .hours-spent {
+        width: 200px;
+    }
+
 }
+
 
 
 

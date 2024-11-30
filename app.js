@@ -41,16 +41,6 @@ const daily = document.getElementById("daily");
 const weekly = document.getElementById("weekly");
 const monthly = document.getElementById("monthly");
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   updateTime("daily")
-// });
-// document.addEventListener("DOMContentLoaded", () => {
-//   updateTime("weekly")
-// });
-// document.addEventListener("DOMContentLoaded", () => {
-//   updateTime("monthly")
-// });
-
 document.querySelector(".user-tracker").addEventListener("click", (e) => {
   if (e.target.tagName === "P") {
     const period = e.target.textContent.toLowerCase();
